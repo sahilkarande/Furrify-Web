@@ -51,17 +51,19 @@
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a> 
-                    <!-- feed section -->
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Discussion forums</a>
-                    <a href="package.html" class="nav-item nav-link">Meetups</a>
-                    <a href="package.html" class="nav-item nav-link">Marketplace</a>
-                    <a href="contact.html" class="nav-item nav-link">Content</a>
-                    <a href="package.html" class="nav-item nav-link">Events</a>
-                    <a href="contact.html" class="nav-item nav-link">Resources</a>
-                </div>
+              <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a> 
+                <!-- feed section -->
+                <a href="index.html" class="nav-item nav-link">About</a>
+                <a href="discussionforum.html" class="nav-item nav-link">Discussion forums</a>
+                <a href="index.html" class="nav-item nav-link">Meetups</a>
+                <a href="index.html" class="nav-item nav-link">Marketplace</a>
+                <a href="index.html" class="nav-item nav-link">Content</a>
+                <a href="index.html" class="nav-item nav-link">Events</a>
+                <a href="index.html" class="nav-item nav-link">Resources</a>
+                
+
+            </div>
                 <a href="" class="btn btn-primary rounded-pill py-2 px-4">My Profile</a>
             </div>
         </nav>
@@ -290,75 +292,71 @@
                   <div class="card-header">Health Information</div>
                   <div class="card-body">
                       <form>
-                          <!-- Form Group (username)-->
-                          <div class="mb-3">
-                              <label class="small mb-1" for="inputUsername">Pet Username(It should be unique)</label>
-                              <input class="form-control" id="inputUsername" type="text"  >
-                          </div>
-                          <!-- Form Row-->
+                         
                           <div class="row gx-3 mb-3">
                               <!-- Form Group (first name)-->
-                              <div class="col-md-6">
-                                  <label class="small mb-1" for="inputFirstName">I'm a ...</label>
-                                  <select class="form-control" id="inputLastName" type="text" placeholder="type of animal" value="Luna"name="cars" id="">
-                                      <option value="Dog">Dog</option>
-                                      <option value="Cat">Cat</option>
-                                      <option value="Rabbit">Rabbit</option>
-                                    </select>                                
-                                  </div>
-
-
-                              <div class="col-md-6">
-                                  <label class="small mb-1" for="inputFirstName">Pet Name</label>
-                                  <input class="form-control" id="inputFirstName" type="text" >
-                              </div>
+                              
 
                              
 
 
                               <!-- Form Group (last name)-->
                               <div class="col-md-6">
-                                  <label class="small mb-1" for="inputLastName">Breed</label>
-                                  <input class="form-control" id="inputLastName" type="text" >
+                                  <label class="small mb-1" for="vaccinationtype">Type of Vaccination</label>
+                                  <input class="form-control" id="vaccinationtype" type="text" >
                               </div>
                               <div class="col-md-6">
-                                  <label class="small mb-1" for="inputLastName">Color</label>
-                                  <input class="form-control" id="inputLastName" type="text" >
+                                  <label class="small mb-1" for="inputLastName">Date of Vaccination</label>
+                                  <input type="date" class="form-control ppDate" id="from-date" aria-describedby="date-design-prepend">
+
+                                  <style>
+                                                    
+                                        .ppDate {
+                                          display: block;
+                                            width: 100%;
+                                            padding: 0.875rem 1.125rem;
+                                            font-size: 0.875rem;
+                                            font-weight: 400;
+                                            line-height: 1;
+                                        }
+                                        .ppDate::-webkit-inner-spin-button,
+                                        .ppDate::-webkit-calendar-picker-indicator {
+                                          display: none;
+                                          -webkit-appearance: none;
+                                        }
+                                        .ppDate:focus::-webkit-calendar-picker-indicator,
+                                        .ppDate:hover::-webkit-calendar-picker-indicator {
+                                          display: block;
+                                          -webkit-appearance: menulist;
+                                        }
+                                        .ppDate::-webkit-clear-button {
+                                          display: none;
+                                          -webkit-appearance: none;
+                                        }
+                                        .constrained {
+                                          max-width: 160px;
+                                        }
+
+                                  </style>
+
                               </div>
                           </div>
-                          <!-- Form Row        -->
-                          <div class="row gx-3 mb-3">
-                              <!-- Form Group (organization name)-->
-                              <div class="col-md-6">
-                                  <label class="small mb-1" for="inputOrgName">Gender</label>
-                                  <select class="form-control" id="inputLastName" type="text" placeholder="type of animal" value="Luna"name="cars" id="">
-                                      <option value="male">Male</option>
-                                      <option value="female">Female</option>
-                                     
-                                    </select> 
-                              </div>
-                              <!-- Form Group (location)-->
-                              <div class="col-md-6">
-                                  <label class="small mb-1" for="inputLocation">Age</label>
-                                  <input class="form-control" id="inputLocation" type="text" >
-                              </div>
-                          </div>
-                          <!-- Form Group (email address)-->
-                          
-                          <!-- Form Row-->
-                          <div class="row gx-3 mb-3">
-                              <!-- Form Group (phone number)-->
-                              <div class="col-md-6">
-                                  <label class="small mb-1" for="inputEmailAddress">Weight</label>
-                                  <input class="form-control" id="inputEmailAddress" type="email" >
-                                  </div>
-                              <!-- Form Group (birthday)-->
-                              <div class="col-md-6">
-                                  <label class="small mb-1" for="inputBirthday">Any distinguishing marks or features</label>
-                                  <input class="form-control" id="inputBirthday" type="text" name="birthday">
-                              </div>
+                          <div class="mb-3">
+                            <label class="small mb-1" for="medcondition">Any medical conditions or allergies</label>
+                            <input class="form-control" id="medcondition" type="text"  >
                           </div>
 
+                          <div class="mb-3">
+                            <label class="small mb-1" for="medication">Any ongoing medication or treatments</label>
+                            <input class="form-control" id="medication" type="text"  >
+                          </div>
+
+                          <div class="mb-3">
+                            <label class="small mb-1" for="emergencycon">Emergency contact information for the veterinarian</label>
+                            <input class="form-control" id="emergencycon" type="text"  >
+                          </div>
+                          
+             
                           <div class="container2">
                             <div class="button-container">
                               <div class="dog">
@@ -400,7 +398,7 @@
 
               <!-- 3rd area start-->
 
-               <!-- 2nd button -->
+              
 
                <div class="card mb-4">
                 <div class="card-header">Behavioural Information</div>
@@ -408,72 +406,26 @@
                     <form>
                         <!-- Form Group (username)-->
                         <div class="mb-3">
-                            <label class="small mb-1" for="inputUsername">Pet Username(It should be unique)</label>
-                            <input class="form-control" id="inputUsername" type="text"  >
+                          <label class="small mb-1" for="temperament">Temperament</label>
+                          <select class="form-control" id="temperament" type="text">
+                            <option value="friendly">Friendly</option>
+                            <option value="shy">Shy</option>
+                            <option value="friendly">Friendly</option>
+                            <option value="aggressive">Aggressive</option>
+                          </select> 
                         </div>
-                        <!-- Form Row-->
-                        <div class="row gx-3 mb-3">
-                            <!-- Form Group (first name)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputFirstName">I'm a ...</label>
-                                <select class="form-control" id="inputLastName" type="text" placeholder="type of animal" value="Luna"name="cars" id="">
-                                    <option value="Dog">Dog</option>
-                                    <option value="Cat">Cat</option>
-                                    <option value="Rabbit">Rabbit</option>
-                                  </select>                                
-                                </div>
 
-
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputFirstName">Pet Name</label>
-                                <input class="form-control" id="inputFirstName" type="text" >
-                            </div>
-
-                           
-
-
-                            <!-- Form Group (last name)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputLastName">Breed</label>
-                                <input class="form-control" id="inputLastName" type="text" >
-                            </div>
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputLastName">Color</label>
-                                <input class="form-control" id="inputLastName" type="text" >
-                            </div>
+                        <div class="mb-3">
+                          <label class="small mb-1" for="behavioral">Any behavioral issues</label>
+                          <select class="form-control" id="behavioral" type="text" >
+                            <option value="separation">Separation anxiety</option>
+                            <option value="chewing">Chewing</option>
+                            <option value="friendly">Friendly</option>
+                            <option value="barking">Barking</option>
+                          </select> 
                         </div>
-                        <!-- Form Row        -->
-                        <div class="row gx-3 mb-3">
-                            <!-- Form Group (organization name)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputOrgName">Gender</label>
-                                <select class="form-control" id="inputLastName" type="text" placeholder="type of animal" value="Luna"name="cars" id="">
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                   
-                                  </select> 
-                            </div>
-                            <!-- Form Group (location)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputLocation">Age</label>
-                                <input class="form-control" id="inputLocation" type="text" >
-                            </div>
-                        </div>
-                        <!-- Form Group (email address)-->
                         
-                        <!-- Form Row-->
-                        <div class="row gx-3 mb-3">
-                            <!-- Form Group (phone number)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputEmailAddress">Weight</label>
-                                <input class="form-control" id="inputEmailAddress" type="email" >
-                                </div>
-                            <!-- Form Group (birthday)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputBirthday">Any distinguishing marks or features</label>
-                                <input class="form-control" id="inputBirthday" type="text" name="birthday">
-                            </div>
-                        </div>
+\
 
                         <div class="container2">
                           <div class="button-container">
@@ -524,72 +476,20 @@
                     <form>
                         <!-- Form Group (username)-->
                         <div class="mb-3">
-                            <label class="small mb-1" for="inputUsername">Pet Username(It should be unique)</label>
-                            <input class="form-control" id="inputUsername" type="text"  >
+                          <label class="small mb-1" for="food">Type of food</label>
+                          <input class="form-control" id="food" type="text"  >
                         </div>
-                        <!-- Form Row-->
-                        <div class="row gx-3 mb-3">
-                            <!-- Form Group (first name)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputFirstName">I'm a ...</label>
-                                <select class="form-control" id="inputLastName" type="text" placeholder="type of animal" value="Luna"name="cars" id="">
-                                    <option value="Dog">Dog</option>
-                                    <option value="Cat">Cat</option>
-                                    <option value="Rabbit">Rabbit</option>
-                                  </select>                                
-                                </div>
 
-
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputFirstName">Pet Name</label>
-                                <input class="form-control" id="inputFirstName" type="text" >
-                            </div>
-
-                           
-
-
-                            <!-- Form Group (last name)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputLastName">Breed</label>
-                                <input class="form-control" id="inputLastName" type="text" >
-                            </div>
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputLastName">Color</label>
-                                <input class="form-control" id="inputLastName" type="text" >
-                            </div>
+                        <div class="mb-3">
+                          <label class="small mb-1" for="feedsch">Feeding schedule</label>
+                          <input class="form-control" id="feedsch" type="text"  >
                         </div>
-                        <!-- Form Row        -->
-                        <div class="row gx-3 mb-3">
-                            <!-- Form Group (organization name)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputOrgName">Gender</label>
-                                <select class="form-control" id="inputLastName" type="text" placeholder="type of animal" value="Luna"name="cars" id="">
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                   
-                                  </select> 
-                            </div>
-                            <!-- Form Group (location)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputLocation">Age</label>
-                                <input class="form-control" id="inputLocation" type="text" >
-                            </div>
+
+                        <div class="mb-3">
+                          <label class="small mb-1" for="dietrest">Any dietary restrictions</label>
+                          <input class="form-control" id="dietrest" type="text"  >
                         </div>
-                        <!-- Form Group (email address)-->
-                        
-                        <!-- Form Row-->
-                        <div class="row gx-3 mb-3">
-                            <!-- Form Group (phone number)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputEmailAddress">Weight</label>
-                                <input class="form-control" id="inputEmailAddress" type="email" >
-                                </div>
-                            <!-- Form Group (birthday)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputBirthday">Any distinguishing marks or features</label>
-                                <input class="form-control" id="inputBirthday" type="text" name="birthday">
-                            </div>
-                        </div>
+
 
                         <div class="container2">
                           <div class="button-container">
@@ -639,74 +539,20 @@
                 <div class="card-header">Exercise Information</div>
                 <div class="card-body">
                     <form>
-                        <!-- Form Group (username)-->
-                        <div class="mb-3">
-                            <label class="small mb-1" for="inputUsername">Pet Username(It should be unique)</label>
-                            <input class="form-control" id="inputUsername" type="text"  >
-                        </div>
-                        <!-- Form Row-->
-                        <div class="row gx-3 mb-3">
-                            <!-- Form Group (first name)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputFirstName">I'm a ...</label>
-                                <select class="form-control" id="inputLastName" type="text" placeholder="type of animal" value="Luna"name="cars" id="">
-                                    <option value="Dog">Dog</option>
-                                    <option value="Cat">Cat</option>
-                                    <option value="Rabbit">Rabbit</option>
-                                  </select>                                
-                                </div>
+                      <div class="mb-3">
+                        <label class="small mb-1" for="exeramt">Amount of exercise needed per day</label>
+                        <input class="form-control" id="exeramt" type="text"  >
+                      </div>
 
-
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputFirstName">Pet Name</label>
-                                <input class="form-control" id="inputFirstName" type="text" >
-                            </div>
-
-                           
-
-
-                            <!-- Form Group (last name)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputLastName">Breed</label>
-                                <input class="form-control" id="inputLastName" type="text" >
-                            </div>
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputLastName">Color</label>
-                                <input class="form-control" id="inputLastName" type="text" >
-                            </div>
-                        </div>
-                        <!-- Form Row        -->
-                        <div class="row gx-3 mb-3">
-                            <!-- Form Group (organization name)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputOrgName">Gender</label>
-                                <select class="form-control" id="inputLastName" type="text" placeholder="type of animal" value="Luna"name="cars" id="">
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                   
-                                  </select> 
-                            </div>
-                            <!-- Form Group (location)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputLocation">Age</label>
-                                <input class="form-control" id="inputLocation" type="text" >
-                            </div>
-                        </div>
-                        <!-- Form Group (email address)-->
-                        
-                        <!-- Form Row-->
-                        <div class="row gx-3 mb-3">
-                            <!-- Form Group (phone number)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputEmailAddress">Weight</label>
-                                <input class="form-control" id="inputEmailAddress" type="email" >
-                                </div>
-                            <!-- Form Group (birthday)-->
-                            <div class="col-md-6">
-                                <label class="small mb-1" for="inputBirthday">Any distinguishing marks or features</label>
-                                <input class="form-control" id="inputBirthday" type="text" name="birthday">
-                            </div>
-                        </div>
+                      
+                      <div class="mb-3">
+                        <label class="small mb-1" for="behavioral">Types of exercise preferred</label>
+                        <select class="form-control" id="behavioral" type="text" >
+                          <option value="Walking">Walking</option>
+                          <option value="running">Running</option>
+                          <option value="playing">Playing</option>
+                        </select> 
+                      </div>
 
                         <div class="container2">
                           <div class="button-container">
