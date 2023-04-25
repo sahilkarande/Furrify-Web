@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Acme|Lobster');
+
+/* This allow me to have the full width of the page without the initial padding/margin*/
+body, html {
+  margin:0;
+  padding:0;
+  height: 100%;
+  width:100%;
+  font-family:Acme;
+  min-width:700px;
+}
+
+.splitdiv{
+  height:100%;
+  width:50%;
+}
+
+/* This part contains all of the left side of the screen */
+/* ----------------------------------------- */
+#leftdiv{
+  float:left;
+  background-color:#ffce00;
+}
+
+#leftdivcard{
+  margin:0 auto;
+  width:50%;
+  background-color:white;
+  margin-top: 50vh; 
+  transform: translateY(-50%);
+  box-shadow: 10px 10px 1px 0px rgba(78, 205, 196, .2);
+  border-radius:10px
+}
+
+
+/* ----------------------------------------- */
+
+/* This part contains all of the right side of the screen */
+/* ----------------------------------------- */
+#rightdiv{
+  float:right;
+  background-color:#ffffff;
+}
+
