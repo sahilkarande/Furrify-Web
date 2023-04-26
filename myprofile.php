@@ -26,19 +26,15 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css\bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css\style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
+    
     <!-- Spinner End -->
 
     <!-- Navbar & Hero Start -->
@@ -100,7 +96,7 @@
             border-radius: 50% !important;
         }
         .card {
-            box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 1z5%);
+            box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
         }
         .card .card-header {
             font-weight: 500;
@@ -176,32 +172,30 @@
  <div class="card mb-4">
   <div class="card-header">Basic Information</div>
   <div class="card-body">
-      <form>
+      <form id="profileForm">
           <!-- Form Group (username)-->
           <div class="mb-3">
-              <label class="small mb-1" for="inputUsername">Pet Username(It should be unique)</label>
-              <input class="form-control" id="inputUsername" type="text"  >
+              <label class="small mb-1" for="petusername">Pet Username(It should be unique)</label>
+              <input class="form-control" type="petusername" name="petusername" id="petusername">
           </div>
           <!-- Form Row-->
           <div class="row gx-3 mb-3">
               <!-- Form Group (first name)-->
               <div class="col-md-6">
                   <label class="small mb-1" for="inputFirstName">I'm a ...</label>
-                  <select class="form-control" id="inputLastName" type="text" placeholder="type of animal" value="Luna"name="cars" id="">
+                  <select class="form-control" id="inputLastName" type="text" >
                       <option value="Dog">Dog</option>
                       <option value="Cat">Cat</option>
                       <option value="Rabbit">Rabbit</option>
                     </select>                                
                   </div>
 
-
               <div class="col-md-6">
-                  <label class="small mb-1" for="inputFirstName">Pet Name</label>
-                  <input class="form-control" id="inputFirstName" type="text" >
+                  <label class="small mb-1" for="petname">Pet Name</label>
+                  <input class="form-control" type="petname" name="petname" id="petname">
               </div>
 
              
-
 
               <!-- Form Group (last name)-->
               <div class="col-md-6">
@@ -218,7 +212,7 @@
               <!-- Form Group (organization name)-->
               <div class="col-md-6">
                   <label class="small mb-1" for="inputOrgName">Gender</label>
-                  <select class="form-control" id="inputLastName" type="text" placeholder="type of animal" value="Luna"name="cars" id="">
+                  <select class="form-control" id="inputLastName" type="text">
                       <option value="male">Male</option>
                       <option value="female">Female</option>
                      
@@ -246,6 +240,8 @@
               </div>
           </div>
 
+
+
           <div class="container2">
             <div class="button-container">
               <div class="dog">
@@ -271,14 +267,15 @@
                   <div class="right"></div>
                 </div>
               </div>
-              <button>
+              <button type="submit">
                 Save Changes
               </button>
+
               <div class="paw"></div>
               <div class="paw top"></div>
             </div>
           </div>
-          
+            <div class="alert">Your message has been sent</div>
       </form>
   </div>
 </div>
@@ -997,18 +994,12 @@ transition: 0.3s top cubic-bezier(0.33, 1, 0.68, 1);
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src="myprofile.js"></script>
 </body>
 
 </html>
