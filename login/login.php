@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v18/vendor/bootstrap/css/bootstrap.min.css">
     <link href="bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    
     <div class="container-fluid">
       <div class="row no-gutter">
           <!-- The image half -->
@@ -31,9 +32,11 @@
                                   <div class="form-group mb-3">
                                       <input id="inputPassword" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
                                   </div>
+                                  
+                                  <p class="text-center">Don’t have an account? <a href="Register.php">Create One</a></p>
+
                                   <div class="custom-control custom-checkbox mb-3">
                                       <input id="customCheck1" type="checkbox" checked class="custom-control-input">
-                                      <label for="customCheck1" class="custom-control-label">Remember password</label>
                                   </div>
                                   <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm">Sign in</button>
                                   <div class="text-center d-flex justify-content-between mt-4">
@@ -55,3 +58,4 @@
 </html>
 
 
+<div class="col-lg-10 col-xl-7 mx-auto">

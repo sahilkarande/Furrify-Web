@@ -1,3 +1,12 @@
+<!-- <?php
+
+if(isset($_SESSION['user_id'])==false){
+
+    header("Location: login\login.php");
+}
+
+?> -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,8 +47,11 @@
 
         /* Profile_page */
         body{
-         background:#dcdcdc;
-         margin-top:20px;
+        //    background: url("https://static.vecteezy.com/system/resources/previews/002/266/253/original/cute-dog-puppy-head-cartoon-doodle-seamless-pattern-free-vector.jpg") repeat-x;
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+            background-position: center;
+            background-size:contain;
         }
         .profile-cover {
             position: relative;
@@ -242,7 +254,7 @@
         
         .panel-title .select2-selection .select2-selection__arrow:before {
             content: "\f107";
-            font-family: "Font Awesome\ 5 Free";
+            font-family: 'Nunito', sans-serif;
             font-weight: 700;
         }
         
@@ -536,7 +548,7 @@
             content: "\f10d";
             color: #999;
             margin-right: 12px;
-            font-family: "FontAwesome";
+            font-family: 'Nunito', sans-serif;
             font-size: 24px;
             font-weight: 900;
         }
@@ -711,7 +723,7 @@
             content: "\f00c";
             color: #fff;
             background-color: #009378;
-            font-family: "FontAwesome";
+            font-family: 'Nunito', sans-serif;
             font-size: 11px;
             line-height: 21px;
             font-weight: 700;
@@ -854,6 +866,8 @@
                     <a href="index.html" class="nav-item nav-link">Content</a>
                     <a href="index.html" class="nav-item nav-link">Events</a>
                     <a href="index.html" class="nav-item nav-link">Resources</a>
+                    <a href="index.html" class="nav-item nav-link">SAC</a>
+                    <a href="Lost&Found.html" class="nav-item nav-link">Lost & Found</a>
                     <a href="myprofile.html" class="nav-item nav-link">My Profile</a>
 
                 </div>
@@ -890,9 +904,9 @@
         position: relative;
         }
         .button-container button {
-        color: white;
+        color: rgba(17, 158, 194 ) ;
         padding: 16px 35px;
-        font-family: "Font Awesome 5 Free";
+        font-family: 'Nunito', sans-serif;
         font-size: 20px;
         background-color:  rgba(17, 158, 194 ); 
         border-color:  rgba(17, 158, 194 ) ;
@@ -1098,9 +1112,9 @@
         width: 80%;
         height: 30%;
         transform: translateX(-50%);
-        background-color: #fff;
+        background-color: rgba(17, 158, 194 ) ;
         border-radius: 1000px 1000px 0 0;
-        background: linear-gradient(#fff, rgba(255, 255, 255, 0));
+        background: linear-gradient(rgba(17, 158, 194 ) ;, rgba(255, 255, 255, 0));
         opacity: 0.3;
         }
         .dog .eyes {

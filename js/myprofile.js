@@ -1,13 +1,11 @@
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBkEYbAihoTdvTjM3XRsD2p9zeqnw3JJKo",
-  authDomain: "furrify-ee3bb.firebaseapp.com",
-  databaseURL: "https://furrify-ee3bb-default-rtdb.firebaseio.com",
-  projectId: "furrify-ee3bb",
-  storageBucket: "furrify-ee3bb.appspot.com",
-  messagingSenderId: "470684284871",
-  appId: "1:470684284871:web:ea38928a3d1d8b5c380be2",
-  measurementId: "G-194TTDNMD7"
+  apiKey: "AIzaSyCMF8eLnzcCsFjTWMIGORDtGFdagGllfN4",
+  authDomain: "furrify-skstmk.firebaseapp.com",
+  databaseURL: "https://furrify-skstmk-default-rtdb.firebaseio.com",
+  projectId: "furrify-skstmk",
+  storageBucket: "furrify-skstmk.appspot.com",
+  messagingSenderId: "69790689677",
+  appId: "1:69790689677:web:7fb93dc2f947fd199875c4"
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -16,7 +14,7 @@ firebase.initializeApp(firebaseConfig);
 var messagesRef = firebase.database().ref('message');
 
 // Listen for form submit
-document.getElementById('profileForm').addEventListener('submit', submitForm);
+document.getElementById('contactform').addEventListener('submit', submitForm);
 
 // Submit form
 function submitForm(e){
@@ -42,7 +40,7 @@ function submitForm(e){
   },3000);
 
   // Clear form
-  document.getElementById('profileForm').reset();
+  document.getElementById('contactform').reset();
 }
 
 // Function to get get form values
