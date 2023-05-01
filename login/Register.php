@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $connection=mysqli_connect("localhost","root","","furrify") or die("Database connection failed");
 $db = mysqli_select_db($connection,'furrify');
 
@@ -14,11 +14,26 @@ if (isset($_POST['submit']))
     $confpass = $_POST['confpass'];
     $roles = $_POST['roles'];
 
-    if($password ==  $confpass)
+    
+    $sql="SELECT * from register Where Email='$email'";
+    $result=mysqli_query($connection, $sql);
+    $present=mysqli_num_rows($result) ;
+
+    if($present>0)
+    {
+        $_SESSION['email_alert']=='1';
+        header("Location:Register.php");
+    }
+
+    else
+    {
+        if($password ==  $confpass)
     {
         $encrypted_password=hash('md5',$password);
         $query = "INSERT INTO `register` (firstname, lastname, email, username, password, roles) VALUES ('$firstname', '$lastname', '$email', '$username','$roles','$encrypted_password')";
     $query_run = mysqli_query($connection,$query);
+
+    header("Location:login.php");
 
     if($query_run)
     {
@@ -35,8 +50,13 @@ if (isset($_POST['submit']))
         echo '<script> type="text/javascript"> alert("Please Reconfirm the password") </script>';
     }
 
-   
+    }
 
+}
+ 
+$message='';
+if(isset($_SESSION['email_alert'])){
+    $message='email ID Already Exist';
 }
 
 ?>
@@ -58,7 +78,14 @@ if (isset($_POST['submit']))
           <div class="col-md-6 d-none d-md-flex bg-image">
           </div>
   
-  
+            <style>
+                h4{
+                    color: red;
+                    text-align: center;
+                }
+            </style>
+
+
           <!-- The content half -->
           <div class="col-md-6 bg-light">
               <div class="login d-flex align-items-center py-5">
@@ -68,6 +95,7 @@ if (isset($_POST['submit']))
                       <div class="row">
                           <div class="col-lg-10 col-xl-7 mx-auto">
                               <h3 class="display-4">Register</h3>
+                              <h4><?php echo $message; ?></h4>
                               <form role="form" method="post">
                                   <div class="form-group mb-3">
                                       <input required id="inputfirstname" type="firstname" name="firstname" placeholder="Firstname" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4 ">
@@ -116,6 +144,7 @@ if (isset($_POST['submit']))
 
                               </form>
                           </div>
+                          <?php unset($_SESSION['email_alert']); ?>
                       </div>
                   </div><!-- End -->
   
@@ -127,5 +156,3 @@ if (isset($_POST['submit']))
   </body>
 
 </html>
-
-
