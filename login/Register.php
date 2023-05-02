@@ -4,8 +4,7 @@ $connection=mysqli_connect("localhost","root","","furrify") or die("Database con
 $db = mysqli_select_db($connection,'furrify');
 
 
-if (isset($_POST['submit']))
-{
+if (isset($_POST['submit'])) {
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
@@ -14,50 +13,54 @@ if (isset($_POST['submit']))
     $confpass = $_POST['confpass'];
     $roles = $_POST['roles'];
 
-    
-    $sql="SELECT * from register Where Email='$email'";
-    $result=mysqli_query($connection, $sql);
-    $present=mysqli_num_rows($result) ;
+    // Check if the email already exists
+    $sql = "SELECT * FROM register WHERE email = '$email'";
+    $result = mysqli_query($connection, $sql);
+    $present = mysqli_num_rows($result);
 
-    if($present>0)
-    {
-        $_SESSION['email_alert']=='1';
-        header("Location:Register.php");
+    if ($present > 0) {
+        $_SESSION['email_alert'] = '1';
+        header("Location: Register.php");
+        exit;
+    } else {
+        // Check if the same email and UserID already exists
+        $sql = "SELECT * FROM register WHERE email = '$email' AND UserID = '$userid'";
+        $result = mysqli_query($connection, $sql);
+        $present = mysqli_num_rows($result);
+
+        if ($present > 0) {
+            $_SESSION['email_alert'] = '1';
+            header("Location: Register.php");
+            exit;
+        } else {
+         
+            
+            // Insert the new record
+            $query = "INSERT INTO `register` (firstname, lastname, email, username, password, confpass, roles) 
+                      VALUES ('$firstname', '$lastname', '$email', '$username', '$password','$confpass', '$roles')";
+            $query_run = mysqli_query($connection, $query);
+
+            if ($query_run) {
+                $_SESSION['success'] = 'You have been successfully registered as a user.';
+                header("Location: login.php");
+                exit;
+            } else {
+                $_SESSION['error'] = 'Data not saved, please try again.';
+                header("Location: Register.php");
+                exit;
+            }
+        }
     }
-
-    else
-    {
-        if($password ==  $confpass)
-    {
-        $encrypted_password=hash('md5',$password);
-        $query = "INSERT INTO `register` (firstname, lastname, email, username, password, roles) VALUES ('$firstname', '$lastname', '$email', '$username','$roles','$encrypted_password')";
-    $query_run = mysqli_query($connection,$query);
-
-    header("Location:login.php");
-
-    if($query_run)
-    {
-        echo '<script> type="text/javascript"> alert("You have been Successfully Registered as User.") </script>';
-    }
-
-    else 
-    {
-        echo '<script> type="text/javascript"> alert("Data not Saved, please try again.") </script>';
-
-    }
-    }
-    else{
-        echo '<script> type="text/javascript"> alert("Please Reconfirm the password") </script>';
-    }
-
-    }
-
 }
- 
-$message='';
-if(isset($_SESSION['email_alert'])){
-    $message='email ID Already Exist';
+
+// Show error message if email already exists
+if (isset($_SESSION['email_alert'])) {
+    $message = 'Email ID already exists.';
+    echo "<script type='text/javascript'>alert('$message');</script>";
+    unset($_SESSION['email_alert']);
 }
+
+
 
 ?>
 
@@ -95,7 +98,6 @@ if(isset($_SESSION['email_alert'])){
                       <div class="row">
                           <div class="col-lg-10 col-xl-7 mx-auto">
                               <h3 class="display-4">Register</h3>
-                              <h4><?php echo $message; ?></h4>
                               <form role="form" method="post">
                                   <div class="form-group mb-3">
                                       <input required id="inputfirstname" type="firstname" name="firstname" placeholder="Firstname" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4 ">
@@ -129,7 +131,6 @@ if(isset($_SESSION['email_alert'])){
 
                                 <script src="js\main.js"></script>
 
-                                  <p class="text-center">Don’t have an account? <a href="sign-up.php">Create One</a></p>
                                   <p class="text-center">Have an account?<a href="login.php">Login</a></p>
 
 

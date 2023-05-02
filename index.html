@@ -469,7 +469,7 @@ if(isset($_SESSION['user_id'])==false){
             border-left: 2px solid #ebebea;
         }
         
-        .activity__list__icon {
+        .activity_list_icon {
             display: none;
             position: absolute;
             top: 2px;
@@ -488,7 +488,7 @@ if(isset($_SESSION['user_id'])==false){
             z-index: 0;
         }
         
-        .activity__list__header {
+        .activity_list_header {
             position: relative;
             min-height: 35px;
             padding-top: 4px;
@@ -497,7 +497,7 @@ if(isset($_SESSION['user_id'])==false){
             z-index: 0;
         }
         
-        .activity__list__body {
+        .activity_list_body {
             padding-top: 13px;
             padding-left: 43px;
         }
@@ -553,7 +553,7 @@ if(isset($_SESSION['user_id'])==false){
             font-weight: 900;
         }
         
-        .activity__list__header img {
+        .activity_list_header img {
             position: absolute;
             top: 0;
             left: 0;
@@ -561,12 +561,12 @@ if(isset($_SESSION['user_id'])==false){
             border-radius: 50%;
         }
         
-        .activity__list__header a {
+        .activity_list_header a {
             color: #222;
             font-weight: 600;
         }
         
-        .activity__list__footer {
+        .activity_list_footer {
             display: -ms-flexbox;
             display: -webkit-box;
             display: flex;
@@ -577,23 +577,23 @@ if(isset($_SESSION['user_id'])==false){
             border-top: 1px dotted #ccc;
         }
         
-        .activity__list__footer a {
+        .activity_list_footer a {
             color: inherit;
         }
         
-        .activity__list__footer a + a {
+        .activity_list_footer a + a {
             margin-left: 15px;
         }
         
-        .activity__list__footer i {
+        .activity_list_footer i {
             margin-right: 8px;
         }
         
-        .activity__list__footer a:hover {
+        .activity_list_footer a:hover {
             color: #222;
         }
         
-        .activity__list__footer span {
+        .activity_list_footer span {
             margin-left: auto;
         }
         
@@ -848,7 +848,7 @@ if(isset($_SESSION['user_id'])==false){
 
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light px-1 px-lg-1 py-3 py-lg-0" >
+        <nav class="navbar navbar-expand-lg navbar-light px-1 px-lg-1 py-1 py-lg-0" >
             <a href="" class="navbar-brand p-0">
                 <h1 class="text-primary m-0"><img src="img\logo.png" style="padding-left: 60px; padding-right: 30px;">Furrify</h1>
             </a>
@@ -867,7 +867,7 @@ if(isset($_SESSION['user_id'])==false){
                     <a href="index.html" class="nav-item nav-link">Events</a>
                     <a href="index.html" class="nav-item nav-link">Resources</a>
                     <a href="index.html" class="nav-item nav-link">SAC</a>
-                    <a href="Lost&Found.html" class="nav-item nav-link">Lost & Found</a>
+                    <a href="/L&F/Lost&Found.html" class="nav-item nav-link">Lost & Found</a>
                     <a href="myprofile.html" class="nav-item nav-link">My Profile</a>
 
                 </div>
@@ -904,7 +904,7 @@ if(isset($_SESSION['user_id'])==false){
         position: relative;
         }
         .button-container button {
-        color: rgba(17, 158, 194 ) ;
+        color: rgb(255, 255, 255) ;
         padding: 16px 35px;
         font-family: 'Nunito', sans-serif;
         font-size: 20px;
@@ -1114,7 +1114,7 @@ if(isset($_SESSION['user_id'])==false){
         transform: translateX(-50%);
         background-color: rgba(17, 158, 194 ) ;
         border-radius: 1000px 1000px 0 0;
-        background: linear-gradient(rgba(17, 158, 194 ) ;, rgba(255, 255, 255, 0));
+        background: linear-gradient(rgba(17, 158, 194 ) , rgba(255, 255, 255, 0));
         opacity: 0.3;
         }
         .dog .eyes {
@@ -1254,7 +1254,76 @@ if(isset($_SESSION['user_id'])==false){
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <div class="container" name="section1">
         <div class="col-lg-13">
+            <div class="search-box center">
+                <button class="btn-search"><i class="fas fa-search"></i></button>
+                <input type="text" class="input-search" placeholder="Search People">
+              </div>
             
+            <style>
+                *{
+  box-sizing: border-box;
+}
+
+.search-box{
+  width: fit-content;
+  height: fit-content;
+  position:relative;
+
+}
+.input-search{
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: #119EC2;
+  padding-right: 40px;
+  color:black;
+}
+.input-search::placeholder{
+  color:rgba(255,255,255,.5);
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+.btn-search{
+  width: 50px;
+  height: 50px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  color:BLACK ;
+  background-color:transparent;
+  pointer-events: painted;  
+}
+.btn-search:focus ~ .input-search{
+  width: 300px;
+  border-radius: 50px;
+  background-color: #119EC2;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.input-search:focus{
+  width: 300px;
+  border-radius: 50px;
+  background-color: #119EC2;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+
+
+            </style>
+            <br><br>
             <div class="panel">
                 
                 <div class="panel-content panel-activity">
@@ -1282,30 +1351,30 @@ if(isset($_SESSION['user_id'])==false){
                     </form>
                     <ul class="panel-activity__list">
                         <li>
-                            <i class="activity__list__icon fa fa-question-circle-o"></i>
-                            <div class="activity__list__header">
+                            <i class="activity_list_icon fa fa-question-circle-o"></i>
+                            <div class="activity_list_header">
                                 <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" />
                                 <a href="#">John Doe</a> Posted the question: <a href="#">How can I change my annual reports for the better effect?</a>
                             </div>
-                            <div class="activity__list__body entry-content">
+                            <div class="activity_list_body entry-content">
                                 <p>
                                     <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisicing elit. Voluptatibus ab a nostrum repudiandae dolorem ut quaerat veniam asperiores, rerum voluptatem magni dolores corporis!
                                     <em>Molestiae commodi nesciunt a, repudiandae repellendus ea.</em>
                                 </p>
                             </div>
-                            <div class="activity__list__footer">
+                            <div class="activity_list_footer">
                                 <a href="#"> <i class="fa fa-thumbs-up"></i>123</a>
                                 <a href="#"> <i class="fa fa-comments"></i>23</a>
                                 <span> <i class="fa fa-clock"></i>2 hours ago</span>
                             </div>
                         </li>
                         <li>
-                            <i class="activity__list__icon fa fa-question-circle-o"></i>
-                            <div class="activity__list__header">
+                            <i class="activity_list_icon fa fa-question-circle-o"></i>
+                            <div class="activity_list_header">
                                 <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" />
                                 <a href="#">John Doe</a> Posted the question: <a href="#">How can I change my annual reports for the better effect?</a>
                             </div>
-                            <div class="activity__list__body entry-content">
+                            <div class="activity_list_body entry-content">
                                 <blockquote>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ab a nostrum repudiandae dolorem ut quaerat veniam asperiores, rerum voluptatem magni dolores corporis! Molestiae commodi nesciunt a,
@@ -1313,19 +1382,19 @@ if(isset($_SESSION['user_id'])==false){
                                     </p>
                                 </blockquote>
                             </div>
-                            <div class="activity__list__footer">
+                            <div class="activity_list_footer">
                                 <a href="#"> <i class="fa fa-thumbs-up"></i>123</a>
                                 <a href="#"> <i class="fa fa-comments"></i>23</a>
                                 <span> <i class="fa fa-clock"></i>2 hours ago</span>
                             </div>
                         </li>
                         <li>
-                            <i class="activity__list__icon fa fa-image"></i>
-                            <div class="activity__list__header">
+                            <i class="activity_list_icon fa fa-image"></i>
+                            <div class="activity_list_header">
                                 <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" />
                                 <a href="#">John Doe</a> Uploaded 4 Image: <a href="#">Office Working Time</a>
                             </div>
-                            <div class="activity__list__body entry-content">
+                            <div class="activity_list_body entry-content">
                                 <ul class="gallery">
                                     <li>
                                         <img src="img\s1.jpg" alt="" />
@@ -1339,19 +1408,19 @@ if(isset($_SESSION['user_id'])==false){
                                         <img src="img\s4.jpg" alt="" />                                    </li>
                                 </ul>
                             </div>
-                            <div class="activity__list__footer">
+                            <div class="activity_list_footer">
                                 <a href="#"> <i class="fa fa-thumbs-up"></i>123</a>
                                 <a href="#"> <i class="fa fa-comments"></i>23</a>
                                 <span> <i class="fa fa-clock"></i>2 hours ago</span>
                             </div>
                         </li>
                         <li>
-                            <i class="activity__list__icon fa fa-question-circle-o"></i>
-                            <div class="activity__list__header">
+                            <i class="activity_list_icon fa fa-question-circle-o"></i>
+                            <div class="activity_list_header">
                                 <img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="" />
                                 <a href="#">John Doe</a> Posted the question: <a href="#">How can I change my annual reports for the better effect?</a>
                             </div>
-                            <div class="activity__list__body entry-content">
+                            <div class="activity_list_body entry-content">
                                 <blockquote>
                                     <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus ab a nostrum repudiandae dolorem ut quaerat veniam asperiores, rerum voluptatem magni dolores corporis! Molestiae commodi nesciunt a,
@@ -1359,19 +1428,19 @@ if(isset($_SESSION['user_id'])==false){
                                     </p>
                                 </blockquote>
                             </div>
-                            <div class="activity__list__footer">
+                            <div class="activity_list_footer">
                                 <a href="#"> <i class="fa fa-thumbs-up"></i>123</a>
                                 <a href="#"> <i class="fa fa-comments"></i>23</a>
                                 <span> <i class="fa fa-clock"></i>2 hours ago</span>
                             </div>
                         </li>
                         <li>
-                            <i class="activity__list__icon fa fa-lightbulb-o"></i>
-                            <div class="activity__list__header">
+                            <i class="activity_list_icon fa fa-lightbulb-o"></i>
+                            <div class="activity_list_header">
                                 <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" />
                                 <a href="#">John Doe</a> bookmarked a page: <a href="#">Awesome Idea</a>
                             </div>
-                            <div class="activity__list__footer">
+                            <div class="activity_list_footer">
                                 <a href="#"> <i class="fa fa-thumbs-up"></i>123</a>
                                 <a href="#"> <i class="fa fa-comments"></i>23</a>
                                 <span> <i class="fa fa-clock"></i>2 hours ago</span>
@@ -1476,4 +1545,4 @@ if(isset($_SESSION['user_id'])==false){
     <script src="js/main.js"></script>
 </body>
 
-</html>
+</html>**
