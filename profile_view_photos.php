@@ -11,6 +11,7 @@ if (!isset($_SESSION["userid"])) {
 $connection = mysqli_connect("localhost", "root", "", "furrify") or die("Database connection failed");
 $db = mysqli_select_db($connection, 'furrify');
 
+
 // Check connection
 if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
@@ -81,30 +82,31 @@ if (mysqli_num_rows($result) > 0) {
 
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="" class="navbar-brand p-0">
-                <h1 class="text-primary m-0"><img src="img\logo.png" style="padding-left: 60px; padding-right: 30px;">Furrify</h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link">Home</a> 
-                <!-- feed section -->
-                <a href="index.html" class="nav-item nav-link">About</a>
-                <a href="discussionforum.html" class="nav-item nav-link">Discussion forums</a>
-                <a href="index.html" class="nav-item nav-link">Meetups</a>
-                <a href="index.html" class="nav-item nav-link">Marketplace</a>
-                <a href="index.html" class="nav-item nav-link">Content</a>
-                <a href="index.html" class="nav-item nav-link">Events</a>
-                <a href="index.html" class="nav-item nav-link">Resources</a>
-                
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+    <a href="" class="navbar-brand p-0">
+        <h1 class="text-primary m-0"><img src="img\logo.png" style="padding-left: 60px; padding-right: 30px;">Furrify</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="fa fa-bars"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0">
+            <a href="index.html" class="nav-item nav-link">Home</a> 
+            <a href="index.html" class="nav-item nav-link">About</a>
+            <a href="discussionforum.html" class="nav-item nav-link">Discussion forums</a>
+            <a href="index.html" class="nav-item nav-link">Meetups</a>
+            <a href="index.html" class="nav-item nav-link">Marketplace</a>
+            <a href="index.html" class="nav-item nav-link">Content</a>
+            <a href="index.html" class="nav-item nav-link">Events</a>
+            <a href="index.html" class="nav-item nav-link">Resources</a>
+        </div>
+        <form action="#">
+            <input type="file" accept="image/*" onchange="previewFile()" style="display:none" id="headerImageInput">
+            <a href="#" class="btn btn-primary rounded-pill py-2 px-4 active" onclick="document.getElementById('headerImageInput').click()">Change Header Image</a>
+        </form>
+    </div>
+</nav>
 
-            </div>
-                <a href="" class="btn btn-primary rounded-pill py-2 px-4 active">My Profile</a>
-            </div>
-        </nav>
 
         <div class="container-fluid bg-primary py-5 mb-5 hero-header">
             <div class="container py-5">
@@ -152,7 +154,7 @@ if (mysqli_num_rows($result) > 0) {
                                 <div class="right"></div>
                               </div>
                             </div>
-                            <a href='myprofile.html'>
+                            <a href='logout.php'>
                             <button>
                              Log out
                             </button>
