@@ -1,7 +1,12 @@
 <?php
-session_start();
 $connection=mysqli_connect("localhost","root","","furrify") or die("Database connection failed");
 $db = mysqli_select_db($connection,'furrify');
+$userid = mysqli_insert_id($connection);
+session_start();
+$userid = $_SESSION["userid"];
+
+
+
 
 
 if (isset($_POST['submit'])) {
@@ -24,7 +29,7 @@ if (isset($_POST['submit'])) {
         exit;
     } else {
         // Check if the same email and UserID already exists
-        $sql = "SELECT * FROM register WHERE email = '$email' AND UserID = '$userid'";
+        $sql = "SELECT * FROM register WHERE email = '$email' AND userID = '$userid'";
         $result = mysqli_query($connection, $sql);
         $present = mysqli_num_rows($result);
 
@@ -72,8 +77,8 @@ if (isset($_SESSION['email_alert'])) {
 
   <body>
     <link rel="stylesheet" type="text/css" href="https://colorlib.com/etc/lf/Login_v18/vendor/bootstrap/css/bootstrap.min.css">
-    <link href="bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+    <link href="login/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="login/style.css" />
     
     <div class="container-fluid">
       <div class="row no-gutter">

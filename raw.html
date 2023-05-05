@@ -1,3 +1,39 @@
+<?php
+$connection=mysqli_connect("localhost","root","","furrify") or die("Database connection failed");
+$db = mysqli_select_db($connection,'furrify');
+$userid = mysqli_insert_id($connection);
+session_start();
+
+$n_user = $userid;
+$userid = $_SESSION["userid"] + $n_user ;
+
+// Check connection
+if (!$connection) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+// Query the database to get the user's first name and last name
+$sql = "SELECT firstname, lastname FROM register WHERE userid= '$userid'";
+$result = mysqli_query($connection, $sql);
+
+
+
+// Check for errors
+if (!$result) {
+  die("Query failed: " . mysqli_error($connection));
+}
+
+// Display the user's first name and last name in HTML
+if (mysqli_num_rows($result) > 0) {
+  $row = mysqli_fetch_assoc($result);
+  $full_name = $row["firstname"] . " " . $row["lastname"];
+} else {
+  echo "<p>No results found for user ID $userid</p>";
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,10 +105,9 @@
                 <div class="row justify-content-center py-5">
                     <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
                       <div class="wrapper">
-                        <img src="https://media.licdn.com/dms/image/C5603AQGud06vtJhmNA/profile-displayphoto-shrink_800_800/0/1636377177800?e=2147483647&v=beta&t=t0Ottkgl54vtLFwRHtdxyLBuOMKSJ_Al7obUGY0Y384" class="image--cover">
+                        <img src="https://i.pinimg.com/474x/bb/23/85/bb23850fff6159c25e0592de567c355e.jpg" class="image--cover">
                       </div>
-                        <h1 class="display-3 text-white animated slideInDown">{User name}</h1>
-                        <nav aria-label="breadcrumb">
+                      <h1 class="display-3 text-white animated slideInDown" style="color: #000;"><?php echo $full_name; ?></h1></h1>                        <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Pages</a></li>
