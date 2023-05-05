@@ -30,6 +30,12 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    
+
+    
+
+
 </head>
 
 <body>
@@ -57,9 +63,9 @@
                   <a href="index.html" class="nav-item nav-link">About</a>
                   <a href="discussionforum.html" class="nav-item nav-link active">Discussion forums</a>
                   <a href="index.html" class="nav-item nav-link">Meetups</a>
-                  <a href="index.html" class="nav-item nav-link">Marketplace</a>
+                  <a href="marketplace/marketplace.html" class="nav-item nav-link">Marketplace</a>
                   <a href="index.html" class="nav-item nav-link">Content</a>
-                  <a href="index.html" class="nav-item nav-link">Events</a>
+                  <a href="Event.html" class="nav-item nav-link">Events</a>
                   <a href="index.html" class="nav-item nav-link">Resources</a>
                   <a href="index.html" class="nav-item nav-link">SAC</a>
                   <a href="myprofile.html" class="nav-item nav-link">My Profile</a>
@@ -107,12 +113,162 @@
 <!-- Navbar & Hero End -->
 
 
-    
 
-   
+<!-- Add question  -->
+<div class="fill-button text-center">
+
+  <button class="hbtn" data-bs-target="#mymodel" data-bs-toggle="modal">Add question</button>  
+
+  <div class="modal" id="mymodel">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-body">
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">&times;</button>
+            <div class="myform ">
+                <h1 class="text-center">Add question</h1>
+                <form>
+                    <div class="mb-3 ">
+                        <label  class="form-label" ></label>
+                        <textarea class="form-control" id="exampleInputEmail1" placeholder="Start your question with 'how', 'why', 'what' etc" aria-describedby="emailHelp" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-danger">cancel</button>
+                    <button type="submit" class="btn btn-primary">submit</button>
+                </form>
+            </div>
+        </div>
+      </div>
+      
+  </div>
+
+
+</div>
+
+
+
+<!-- end add question  -->
+
+<div class="container text-center">
+  <div class="row">
+     <div class="col-lg-12">
+      <div class="ui-block panel">
+         <article class="hentry post">
+            <div class="">
+               <a href="#"  target="_blank">
+                  <h4>Why should I follow you, in five sentences?</h4>
+               </a>
+            </div>
+            <div class="post__author author vcard inline-items">
+               <img src="https://a11.t26.net/taringa/avatares/9/1/2/F/7/8/Demon_King1/48x48_5C5.jpg" alt="author">
+               <div class="author-date">
+                  <a class="h6 post__author-name fn" href="#">Dipendra Singh</a>
+                  <div class="post__date">
+                     <time class="published" datetime="2004-07-24T18:18">
+                     Answered 2h ago
+                     </time>
+                  </div>
+               </div>
+               <div class="more">
+                  <a href="#">
+                  <i class="fa fa-ellipsis-v"></i>
+                  </a>
+               </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempo incididunt ut
+               labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris consequat.
+            </p>
+            <div class="post-additional-info inline-items">
+               <p>
+                  <a href="#" class="btn btn-sm btn-light"><span class="fa fa-pencil"></span> Answer</a>
+                  <a href="#" class="btn btn-sm btn-light"> Pass</a>
+               </p>
+               <p class="social-icons">
+                  <a href="#" class="btn btn-sm btn-light"><i class="fa fa-facebook"></i></a>
+                  <a href="#" class="btn btn-sm btn-light"> <i class="fa fa-twitter"></i></a>
+                  <a href="#" class="btn btn-sm btn-light"> <i class="fa fa-share"></i></a>
+               </p>
+            </div>
+         </article>
+      </div>
+      <div class="ui-block">
+         <article class="hentry post">
+            <div class="card mt-4">
+               <div class="card-body">
+                  <h5 class="card-title">How many people use Quora?</h5>
+                  
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
+                  <span class="text-warning">★ ★ ★ ★ ☆</span>
+                  4.0 stars
+               </div>
+            </div>
+
+
+             <!-- /.card -->
+             <div class="card card-outline-secondary my-4">
+              <div class="card-header">
+                 Reviews
+              </div>
+              <div class="card-body">
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                 <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                 <hr>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                 <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                 <hr>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+                 <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                 <hr>
+                 <a href="#" class="btn btn-success">Leave a Review</a>
+              </div>
+           </div>
+
+
+
+            <!-- /.card -->
+              <!-- /.card -->
+            </article>
+          </div>
+       </div>
+
+
+
+
+
+
+
+
+
+       <!-- /.col-lg-6 -->
+       <!--col-lg-3-->
+       <div class="col-lg-13">
+          <div class=" q-wid">
+             <div class="ui-block">
+                <h6 class="my-4">Improve Your Feed</h6>
+                <hr>
+                <div class="nav flex-column nav-pills nav-stacked" id="v-pills-tab"  aria-orientation="vertical">
+                   <a class="nav-link"  data-toggle="pill" href="#"  >  Upvote 5 more good answers</a>
+                   <a class="nav-link"  data-toggle="pill" href="#"  >Ask your first question</a>
+                   <a class="nav-link" data-toggle="pill" href="#"   >Add 3 credentials</a>
+                   <a class="nav-link" data-toggle="pill" href="#">Answer a question</a>
+                </div>
+             </div>
+          </div>
+       </div>
+       <!-- /.col-lg-3 -->
+    </div>
+ </div>
+ <!-- /.container -->
+
+             
+
+
+
+ 
+  
+
+
 <!-- Footer Start -->
     <!-- Remove the container if you want to extend the Footer to full width. -->
-    <div class="col-lg-12">
+<div class="col-lg-12">
         <!-- Footer -->
         <footer class="text-center text-white" style="background-color: #ffce00">
           <!-- Grid container -->
