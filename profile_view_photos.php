@@ -72,7 +72,7 @@ if (mysqli_num_rows($result) > 0) {
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css\style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -108,7 +108,8 @@ if (mysqli_num_rows($result) > 0) {
 </nav>
 
 
-        <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+        <div class="container-fluid bg-primary py-5 mb-5 ">
+        
             <div class="container py-5">
                 <div class="row justify-content-center py-5">
                     <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
@@ -166,6 +167,10 @@ if (mysqli_num_rows($result) > 0) {
                         </div>
                     </div>
                 </div>
+                <form method="post" action="update_header_image.php" enctype="multipart/form-data">
+          <input type="file" accept="image/*" name="header_image" onchange="previewFile()" id="headerImageInput">
+          <input type="submit" value="Update Header Image">
+        </form>
             </div>
         </div>
     </div>
