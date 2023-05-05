@@ -3,7 +3,7 @@ $connection=mysqli_connect("localhost","root","","furrify") or die("Database con
 $db = mysqli_select_db($connection,'furrify');
 $userid = mysqli_insert_id($connection);
 session_start();
-$userid = $_SESSION["userid"];
+
 
 
 
