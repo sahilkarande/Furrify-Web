@@ -30,6 +30,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/style2.css" rel="stylesheet">
 </head>
 
 <body>
@@ -48,7 +49,7 @@
                 <div class="navbar-nav ms-auto py-0">
                   <a href="/index.html" class="nav-item nav-link">Home</a> 
                     <!-- feed section -->
-                  <a href="/index.html" class="nav-item nav-link">About</a>
+                  <!-- <a href="/index.html" class="nav-item nav-link">About</a> -->
                   <a href="/Lost&Found.html" class="nav-item nav-link active">Pets</a>
                   <a href="/myprofile.html" class="nav-item nav-link">Lost</a>
                   <a href="/myprofile.html" class="nav-item nav-link">Found</a>
@@ -476,23 +477,52 @@
                                            
                                            
                                                                <div class="col-md-4">
-                                                                 <label class="small mb-1" for="inputOrgName">Gender</label>
-                                                                 <select class="form-control" id="inputLastName" type="text">
-                                                                     <option value="male">Male</option>
-                                                                     <option value="female">Female</option>
-                                                                    
-                                                                   </select> 
-                                                             </div>    
+                                                                <label class="small mb-1" for="inputOrgName"><h5>Gender</h5></label>
+                                                                <select class="form-control" id="inputLastName" type="text">
+                                                                    <option value="male">Male</option>
+                                                                    <option value="female">Female</option>
+                                                                   
+                                                                  </select> 
+                                                            </div>    
                                            
                                            
                                                              <div class="col-md-4">
-                                                               <label class="small mb-1" for="inputOrgName">Vaccination</label>
+                                                               <label class="small mb-1" for="inputOrgName"><h5>Vaccination</h5></label>
                                                                <select class="form-control" id="inputLastName" type="text">
                                                                    <option value="male">Yes</option>
                                                                    <option value="female">No</option>
                                                                   
                                                                  </select> 
                                                            </div> 
+                                                           <!-- Form Group (last name)-->
+              <div class="col-md-6">
+                <label class="small mb-1" for="inputLastName"><h5>Contact: </h5></label>
+                <input class="form-control" id="inputLastName" type="text" >
+            </div>
+            <div class="col-md-6">
+                <label class="small mb-1" for="inputLastName"><h5>Pet Color: </h5></label>
+                <input class="form-control" id="inputLastName" type="text" >
+            </div>
+        </div>   
+        
+        <!-- Form Row-->
+        <div class="row gx-3 mb-3">
+            <!-- Form Group (phone number)-->
+            <div class="col-md-6">
+                <label class="small mb-1" for="inputEmailAddress"><h5>Breed: </h5></label>
+                <input class="form-control" id="inputEmailAddress" type="email" >
+                </div>
+            <!-- Form Group (birthday)-->
+            <div class="col-md-6">
+                <label class="small mb-1" for="inputBirthday"><h5>Description: </h5></label>
+                <input class="form-control" id="inputBirthday" >
+            </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="small mb-1" for="petname"><h5><B>Upload photo of pet: </B></h5></label>
+          <input id="fileupload" name="myfile" type="file" />
+
                                                          </div> 
                                                      </div>
                                                      
@@ -524,7 +554,142 @@
 <!-- Navbar & Hero End -->
 
 
+<div class="shop-items">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 col-lg-4">
+        <!-- Restaurant Item -->
+        <div class="item">
+          <!-- Item's image -->
+          <img class="img-responsive" src="https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445" height="250" width="300" alt="">
+          <!-- Item details -->
+          <div class="item-dtls">
+            <!-- product title -->
+            <h4>Name- Harry</h4>
+            <h5>Age- 5 weeks</h5>
+            <h5>Breed- Toy Poodle</h5>
+            <h5>Gender- Male</h5>
+            <!-- price -->
+            
+          </div>
+          <!-- add to cart btn -->
+          <div class="ecom bg-lblue">
+            <a class="btn" href="#">Full details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-lg-4">
+        <!-- Restaurant Item -->
+        <div class="item">
+          <!-- Item's image -->
+          <img class="img-responsive" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMWJqP3gln_06nqC_HE2Ec00WzPHhlGcP_SQ&usqp=CAU" height="250" width="300" alt="">
+          <!-- Item details -->
+          <div class="item-dtls">
+            <!-- product title -->
+            <h4>Name- Tom</h4>
+            <h5>Age- 20 weeks</h5>
+            <h5>Breed- German Shepherd</h5>
+            <h5>Gender- Male</h5>
+            <!-- price -->
+            
+          </div>
+          <!-- add to cart btn -->
+          <div class="ecom bg-lblue">
+            <a class="btn" href="#">Full details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-lg-4">
+        <!-- Restaurant Item -->
+        <div class="item">
+          <!-- Item's image -->
+          <img class="img-responsive" src="https://bestforpets.in/wp-content/uploads/2023/03/Persian-cat-3.jpg" height="250" width="300" alt="">
+          <!-- Item details -->
+          <div class="item-dtls">
+            <!-- product title -->
+            <h4>Name- Jerry</h4>
+            <h5>Age- 3 weeks</h5>
+            <h5>Breed- Persian cat</h5>
+            <h5>Gender- male</h5>
+            <!-- price -->
+            
+          </div>
+          <!-- add to cart btn -->
+          <div class="ecom bg-lblue">
+            <a class="btn" href="#">Full details</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-lg-4">
+        <!-- Restaurant Item -->
+        <div class="item">
+          <!-- Item's image -->
+          <img class="img-responsive" src="https://www.catbreedslist.com/uploads/cat-pictures/japanese-bobtail-3.jpg" height="250" width="300" alt="">
+          <!-- Item details -->
+          <div class="item-dtls">
+            <!-- product title -->
+            <h4>Name- Angel</h4>
+            <h5>Age- 2 weeks</h5>
+            <h5>Breed- Japanese Bobtail</h5>
+            <h5>Gender- Female</h5>
+            <!-- price -->
 
+          </div>
+          <!-- add to cart btn -->
+          <div class="ecom bg-lblue">
+            <a class="btn" href="#">Full details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-lg-4">
+        <!-- Restaurant Item -->
+        <div class="item">
+          <!-- Item's image -->
+          <img class="img-responsive" src="https://petkeen.com/wp-content/uploads/2020/10/Brown-Netherland-dwarf-rabbit_RATT_ANARACH_Shutterstock.jpg" height="250" width="300" alt="">
+          <!-- Item details -->
+          <div class="item-dtls">
+            <!-- product title -->
+            <h4>Name- thunder</h4>
+            <h5>Age- 2 weeks</h5>
+            <h5>Breed- Netherland Dwarf rabbit</h5>
+            <h5>Gender- Male</h5>
+            <!-- price -->
+
+          </div>
+          <!-- add to cart btn -->
+          <div class="ecom bg-lblue">
+            <a class="btn" href="#">Full Details</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-lg-4">
+        <!-- Restaurant Item -->
+        <div class="item">
+          <!-- Item's image -->
+          <img class="img-responsive" src="https://thumbs.dreamstime.com/b/small-retriever-puppy-6960709.jpg" height="250" width="300" alt="">
+          <!-- Item details -->
+          <div class="item-dtls">
+            <!-- product title -->
+            <h4>Name- Entertainment</h4>
+            <h5>Age- 2 weeks</h5>
+            <h5>Breed- Golden Retriever</h5>
+            <h5>Gender- Male</h5>
+            <!-- price -->
+            
+          </div>
+          <!-- add to cart btn -->
+          <div class="ecom bg-lblue">
+            <a class="btn" href="#">Full Details</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+</div>
+</div>
 
    
 <!-- Footer Start -->

@@ -92,13 +92,13 @@ if (mysqli_num_rows($result) > 0) {
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
             <a href="index.html" class="nav-item nav-link">Home</a> 
-            <a href="index.html" class="nav-item nav-link">About</a>
+            <!-- <a href="index.html" class="nav-item nav-link">About</a> -->
             <a href="discussionforum.html" class="nav-item nav-link">Discussion forums</a>
             <a href="index.html" class="nav-item nav-link">Meetups</a>
             <a href="index.html" class="nav-item nav-link">Marketplace</a>
-            <a href="index.html" class="nav-item nav-link">Content</a>
+            <!-- <a href="index.html" class="nav-item nav-link">Content</a> -->
             <a href="index.html" class="nav-item nav-link">Events</a>
-            <a href="index.html" class="nav-item nav-link">Resources</a>
+            <!-- <a href="index.html" class="nav-item nav-link">Resources</a> -->
         </div>
         <form action="#">
             <input type="file" accept="image/*" onchange="previewFile()" style="display:none" id="headerImageInput">
