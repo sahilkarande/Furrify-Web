@@ -48,13 +48,13 @@
                 <div class="navbar-nav ms-auto py-0">
                     <a href="index.html" class="nav-item nav-link ">Home</a> 
                     <!-- feed section -->
-                    <a href="index.html" class="nav-item nav-link">About</a>
+
                     <a href="discussionforum.html" class="nav-item nav-link">Discussion forums</a>
                     <a href="index.html" class="nav-item nav-link">Meetups</a>
                     <a href="index.html" class="nav-item nav-link">Marketplace</a>
-                    <a href="index.html" class="nav-item nav-link">Content</a>
+
                     <a href="index.html" class="nav-item nav-link active">Events</a>
-                    <a href="index.html" class="nav-item nav-link">Resources</a>
+
                     <a href="index.html" class="nav-item nav-link">SAC</a>
                     <a href="Lost&Found.html" class="nav-item nav-link">Lost & Found</a>
                     <a href="profile_view_photos.html" class="nav-item nav-link">My Profile</a>
@@ -690,80 +690,9 @@
 
 
 
-<script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
-    <script>
-const search = document.getElementById('search');
-const filteredNames = document.getElementById('filtered-names');
-const peopleList = document.getElementById('people-list');
-let personCount = 1;
-
-// Add event listener to the search box
-search.addEventListener('input', function() {
-  const query = this.value.toLowerCase();
-
-  // Loop through each person and check if their name matches the search query
-  let filtered = [];
-  for (let i = 0; i < peopleList.children.length; i++) {
-    const name = peopleList.children[i].getElementsByClassName('name')[0].textContent.toLowerCase();
-    if (name.includes(query)) {
-      peopleList.children[i].style.display = '';
-      filtered.push(name);
-    } else {
-      peopleList.children[i].style.display = 'none';
-    }
-  }
-
-  // Display the filtered names, if any
-  if (filtered.length > 0) {
-    filteredNames.textContent = `Filtered names: ${filtered.join(', ')}`;
-  } else {
-    filteredNames.textContent = '';
-  }
-});
-
-// Add event listener to the plus button
-const addPersonBtn = document.getElementById('add-person-btn');
-addPersonBtn.addEventListener('click', function() {
-  const name = prompt('Enter the name of the new person:');
-  if (name) {
-    const newPerson = document.createElement('div');
-    newPerson.classList.add('person');
-    newPerson.setAttribute('id', 'person' + (++personCount));
-    newPerson.innerHTML = `
-      <span class="name">${name}</span>
-      <div class="icons">
-        <i class="fas fa-user"></i>
-        <i class="fas fa-comment"></i>
-      </div>
-    `;
-    peopleList.appendChild(newPerson);
-  }
-});
-
-
-// Add event listener to the add person button
-addPersonButton.addEventListener('click', function() {
-  const personCount = peopleList.children.length + 1;
-  const newPerson = document.createElement('div');
-  newPerson.classList.add('person');
-  newPerson.id = `person${personCount}`;
-  newPerson.innerHTML = `
-    <span class="name">New Person ${personCount}</span>
-    <div class="icons">
-      <i class="fas fa-user"></i>
-      <i class="fas fa-comment"></i>
-    </div>
-  `;
-  peopleList.appendChild(newPerson);
-});
-
-    </script>
-
-
-
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
-<div class="container">
+<div class="container e-l">
     <!-- start event block -->
     <div class="row align-items-center event-block no-gutters margin-40px-bottom">
         <div class="col-lg-5 col-sm-12">
@@ -775,9 +704,10 @@ addPersonButton.addEventListener('click', function() {
                 </div>
             </div>
         </div>
+        
         <div class="col-lg-7 col-sm-12">
             <div class="padding-60px-lr md-padding-50px-lr sm-padding-30px-all xs-padding-25px-all">
-                <h5 class="margin-15px-bottom md-margin-10px-bottom font-size22 md-font-size20 xs-font-size18 font-weight-500"><a href="event-details.html" class="text-theme-color">Business Conference</a></h5>
+                <h5 class="margin-15px-bottom md-margin-10px-bottom font-size22 md-font-size20 xs-font-size18 font-weight-500 ev" id="ev1"><a href="event-details.html" class="text-theme-color">FURRDAY</a></h5>
                 <ul class="event-time margin-10px-bottom md-margin-5px-bottom">
                     <li><i class="far fa-clock margin-10px-right"></i> 01:30 PM - 04:30 PM</li>
                     <li><i class="fas fa-user margin-5px-right"></i> Anchor : John Sminth</li>
@@ -793,7 +723,7 @@ addPersonButton.addEventListener('click', function() {
     <div class="row align-items-center event-block no-gutters margin-40px-bottom">
         <div class="col-lg-7 order-2 order-lg-1">
             <div class="padding-60px-lr md-padding-50px-lr sm-padding-30px-all xs-padding-25px-all">
-                <h5 class="margin-15px-bottom md-margin-10px-bottom font-size22 md-font-size20 xs-font-size18 font-weight-500"><a href="event-details.html" class="text-theme-color">Craft Workshops</a></h5>
+                <h5 class="margin-15px-bottom md-margin-10px-bottom font-size22 md-font-size20 xs-font-size18 font-weight-500 ev" id="ev2"><a href="event-details.html" class="text-theme-color">PUP FEST</a></h5>
                 <ul class="event-time margin-10px-bottom md-margin-5px-bottom">
                     <li><i class="far fa-clock margin-10px-right"></i> 09:00 AM - 09:30 PM</li>
                     <li><i class="fas fa-user margin-5px-right"></i> Speaker : Alexa Zone</li>
@@ -827,7 +757,7 @@ addPersonButton.addEventListener('click', function() {
         </div>
         <div class="col-lg-7 col-sm-12">
             <div class="padding-60px-lr md-padding-50px-lr sm-padding-30px-all xs-padding-25px-all">
-                <h5 class="margin-15px-bottom md-margin-10px-bottom font-size22 md-font-size20 xs-font-size18 font-weight-500"><a href="event-details.html" class="text-theme-color">Mentorship Program</a></h5>
+                <h5 class="margin-15px-bottom md-margin-10px-bottom font-size22 md-font-size20 xs-font-size18 font-weight-500 ev" id="ev3"><a href="event-details.html" class="text-theme-color">PAWSOME SUNDAY!</a></h5>
                 <ul class="event-time margin-10px-bottom md-margin-5px-bottom">
                     <li><i class="far fa-clock margin-10px-right"></i> 09:20 AM - 12:00 AM</li>
                     <li><i class="fas fa-user margin-5px-right"></i> Speaker : Avil Mex</li>
@@ -843,7 +773,7 @@ addPersonButton.addEventListener('click', function() {
     <div class="row align-items-center event-block no-gutters margin-40px-bottom">
         <div class="col-lg-7 order-2 order-lg-1">
             <div class="padding-60px-lr md-padding-50px-lr sm-padding-30px-all xs-padding-25px-all">
-                <h5 class="margin-15px-bottom md-margin-10px-bottom font-size22 md-font-size20 xs-font-size18 font-weight-500"><a href="event-details.html" class="text-theme-color">Technical Events</a></h5>
+                <h5 class="margin-15px-bottom md-margin-10px-bottom font-size22 md-font-size20 xs-font-size18 font-weight-500 ev" id="ev4"><a href="event-details.html" class="text-theme-color">PETEXPO</a></h5>
                 <ul class="event-time margin-10px-bottom md-margin-5px-bottom">
                     <li><i class="far fa-clock margin-10px-right"></i> 10:00 AM - 09:00 PM</li>
                     <li><i class="fas fa-user margin-5px-right"></i> Speaker : Venil Monts</li>
@@ -877,7 +807,7 @@ addPersonButton.addEventListener('click', function() {
         </div>
         <div class="col-lg-7 col-sm-12">
             <div class="padding-60px-lr md-padding-50px-lr sm-padding-30px-all xs-padding-25px-all">
-                <h5 class="margin-15px-bottom md-margin-10px-bottom font-size22 md-font-size20 xs-font-size18 font-weight-500"><a href="event-details.html" class="text-theme-color">Startup Events</a></h5>
+                <h5 class="margin-15px-bottom md-margin-10px-bottom font-size22 md-font-size20 xs-font-size18 font-weight-500 ev" id="ev5"><a href="event-details.html" class="text-theme-color">PETTINOUT</a></h5>
                 <ul class="event-time margin-10px-bottom md-margin-5px-bottom">
                     <li><i class="far fa-clock margin-10px-right"></i> 11:00 AM - 09:00 PM</li>
                     <li><i class="fas fa-map-marker-alt margin-5px-right"></i> Speaker : Mavil Aven</li>
@@ -891,6 +821,82 @@ addPersonButton.addEventListener('click', function() {
 
 </div>
 
+
+
+<script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
+    <script>
+const search = document.getElementById('search');
+const filteredNames = document.getElementById('filtered-names');
+const peopleList = document.getElementById('e-l');
+let personCount = 1;
+
+// Add event listener to the search box
+search.addEventListener('input', function() {
+  const query = this.value.toLowerCase();
+
+  // Loop through each person and check if their name matches the search query
+  let filtered = [];
+  for (let i = 0; i < peopleList.children.length; i++) {
+    const name = peopleList.children[i].getElementsByClassName('name')[0].textContent.toLowerCase();
+    if (name.includes(query)) {
+      peopleList.children[i].style.display = '';
+      filtered.push(name);
+    } else {
+      peopleList.children[i].style.display = 'none';
+    }
+  }
+
+  // Display the filtered names, if any
+  if (filtered.length > 0) {
+    filteredNames.textContent = `Filtered names: ${filtered.join(', ')}`;
+  } else {
+    filteredNames.textContent = '';
+  }
+});
+
+// Add event listener to the plus button
+    const newPerson = document.createElement('div');
+    newPerson.classList.add('ev');
+    newPerson.setAttribute('id', 'ev' + (++evCount));
+    newPerson.innerHTML = `
+      <a href="event-details.html" class="text-theme-color">${name}</a></h5>
+                <ul class="event-time margin-10px-bottom md-margin-5px-bottom">
+                    <li><i class="far fa-clock margin-10px-right"></i> 01:30 PM - 04:30 PM</li>
+                    <li><i class="fas fa-user margin-5px-right"></i> Anchor : John Sminth</li>
+                </ul>
+                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore</p>
+                <a class="butn small margin-10px-top md-no-margin-top" href="event-details.html">Read More <i class="fas fa-long-arrow-alt-right margin-10px-left"></i></a>
+            </div>
+        </div>
+    </div>
+    `;
+    peopleList.appendChild(newPerson);
+  }
+});
+
+
+// Add event listener to the add person button
+addPersonButton.addEventListener('click', function() {
+  const personCount = peopleList.children.length + 1;
+  const newPerson = document.createElement('div');
+  newPerson.classList.add('ev');
+  newPerson.id = `ev${personCount}`;
+  newPerson.innerHTML = `
+    <a href="event-details.html" class="text-theme-color">New Person ${personCount}</a></h5>
+                <ul class="event-time margin-10px-bottom md-margin-5px-bottom">
+                    <li><i class="far fa-clock margin-10px-right"></i> 01:30 PM - 04:30 PM</li>
+                    <li><i class="fas fa-user margin-5px-right"></i> Anchor : John Sminth</li>
+                </ul>
+                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore</p>
+                <a class="butn small margin-10px-top md-no-margin-top" href="event-details.html">Read More <i class="fas fa-long-arrow-alt-right margin-10px-left"></i></a>
+            </div>
+        </div>
+    </div>
+  `;
+  peopleList.appendChild(newPerson);
+});
+
+    </script>
 
 
 
