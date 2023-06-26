@@ -52,7 +52,8 @@ if (mysqli_num_rows($result) > 0) {
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <!-- Favicon -->
+    <link href="img\logo.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,25 +91,29 @@ if (mysqli_num_rows($result) > 0) {
         <span class="fa fa-bars"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto py-0">
-            <a href="index.html" class="nav-item nav-link">Home</a> 
-            <!-- <a href="index.html" class="nav-item nav-link">About</a> -->
-            <a href="discussionforum.html" class="nav-item nav-link">Discussion forums</a>
-            <a href="index.html" class="nav-item nav-link">Meetups</a>
-            <a href="index.html" class="nav-item nav-link">Marketplace</a>
-            <!-- <a href="index.html" class="nav-item nav-link">Content</a> -->
-            <a href="index.html" class="nav-item nav-link">Events</a>
-            <!-- <a href="index.html" class="nav-item nav-link">Resources</a> -->
-        </div>
-        <form action="#">
-            <input type="file" accept="image/*" onchange="previewFile()" style="display:none" id="headerImageInput">
-            <a href="#" class="btn btn-primary rounded-pill py-2 px-4 active" onclick="document.getElementById('headerImageInput').click()">Change Header Image</a>
-        </form>
+    <div class="navbar-nav ms-auto py-0">
+                    <a href="timeline.php" class="nav-item nav-link ">Timeline</a> 
+                    <!-- feed section -->
+                    <!-- <a href="/index.html" class="nav-item nav-link">About</a> -->
+                    <a href="discussionforum.html" class="nav-item nav-link">Discussion forums</a>
+                    <a href="timeline.html" class="nav-item nav-link">Meetups</a>
+                    <a href="marketplace.html" class="nav-item nav-link ">Marketplace</a>
+                    <!-- <a href="/index.html" class="nav-item nav-link">Content</a> -->
+                    <a href="eventsx.html" class="nav-item nav-link ">Events</a>
+                    <!-- <a href="/index.html" class="nav-item nav-link">Resources</a> -->
+                    <a href="Veterinarymain.html" class="nav-item nav-link ">Veterinary</a>
+
+                    <a href="timeline.html" class="nav-item nav-link">SAC</a>
+                    <a href="Lost&Found.html" class="nav-item nav-link">Lost & Found</a>
+                    <a href="profile_view_photos.php" class="nav-item nav-link active">My Profile</a>
+
+                </div>
+        
     </div>
 </nav>
 
 
-        <div class="container-fluid bg-primary py-5 mb-5 ">
+        <div class="container-fluid bg-primary py-5 mb-5 hero-header">
         
             <div class="container py-5">
                 <div class="row justify-content-center py-5">
@@ -166,11 +171,15 @@ if (mysqli_num_rows($result) > 0) {
                           </div>
                         </div>
                     </div>
-                </div>
-                <form method="post" action="update_header_image.php" enctype="multipart/form-data">
-          <input type="file" accept="image/*" name="header_image" onchange="previewFile()" id="headerImageInput">
-          <input type="submit" value="Update Header Image">
+                    <form method="post" action="update_header_image.php" enctype="multipart/form-data">
+          <input type="file" accept="image/*" name="header_image" class="btn btn-primary rounded-pill py-2 px-6 active" onchange="previewFile()" id="headerImageInput"> <br> <br>
+          <input type="submit" class="btn btn-primary rounded-pill py-2 px-4 active"  value="Update Header Image">
         </form>
+                </div>
+                
+
+        
+
             </div>
         </div>
     </div>

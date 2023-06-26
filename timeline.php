@@ -1,8 +1,39 @@
+<?
+session_start();
+$connection=mysqli_connect("localhost","root","","furrify") or die("Database connection failed");
+$db = mysqli_select_db($connection,'furrify');
+
+
+if($_SERVER['REQUEST_METHOD'] == "POST"){
+    print_r($_POST);
+}
+
+class Post 
+{
+    private $error = "";
+
+    public function create_post($data)
+    {
+        if(empty($data['post']))
+        {
+            $post = addslashes($data['post']);
+        }else
+        {
+            $this->error .= "Please type something to post!<br>";
+        }
+        return $this->error;
+    }
+}
+
+
+
+?>
+
 <!-- <?php
 
 if(isset($_SESSION['user_id'])==false){
 
-    header("Location: login\login.php");
+    header("Location: login.php");
 }
 
 ?> -->
@@ -857,22 +888,22 @@ if(isset($_SESSION['user_id'])==false){
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
+               <a href="timeline.html" class="nav-item nav-link active ">Home</a> 
+               <!-- feed section -->
+               <!-- <a href="/index.html" class="nav-item nav-link">About</a> -->
+               <a href="discussionforum.html" class="nav-item nav-link ">Discussion forums</a>
+               <a href="timeline.html" class="nav-item nav-link">Meetups</a>
+               <a href="marketplace.html" class="nav-item nav-link ">Marketplace</a>
+               <!-- <a href="/index.html" class="nav-item nav-link">Content</a> -->
+               <a href="eventsx.html" class="nav-item nav-link ">Events</a>
+               <!-- <a href="/index.html" class="nav-item nav-link">Resources</a> -->
+               <a href="Veterinarymain.html" class="nav-item nav-link ">Veterinary</a>
 
-                    <!-- feed section -->
+               <a href="timeline.html" class="nav-item nav-link">SAC</a>
+               <a href="Lost&Found.html" class="nav-item nav-link">Lost & Found</a>
+               <a href="profile_view_photos.php" class="nav-item nav-link">My Profile</a>
 
-                    <a href="index.html" class="nav-item nav-link active">Home</a> 
-                    
-                    <a href="discussionforum.html" class="nav-item nav-link">Discussion forums</a>
-                    <a href="index.html" class="nav-item nav-link">Meetups</a>
-                    <a href="marketplace/marketplace.html" class="nav-item nav-link">Marketplace</a>
-                   
-                    <a href="event.html" class="nav-item nav-link">Events</a>
-                
-                    <a href="index.html" class="nav-item nav-link">SAC</a>
-                    <a href="Lost&Found.html" class="nav-item nav-link">Lost & Found</a>
-                    <a href="profile_view_photos.html" class="nav-item nav-link">My Profile</a>
-
-                </div>
+           </div>
                
             </div >
         </nav>
@@ -1555,4 +1586,4 @@ if(isset($_SESSION['user_id'])==false){
     <script src="js/main.js"></script>
 </body>
 
-</html>**
+</html>
