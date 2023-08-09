@@ -888,7 +888,7 @@ if(isset($_SESSION['user_id'])==false){
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0">
-               <a href="timeline.html" class="nav-item nav-link active ">Home</a> 
+               <a href="index.html" class="nav-item nav-link active ">Home</a> 
                <!-- feed section -->
                <!-- <a href="/index.html" class="nav-item nav-link">About</a> -->
                <a href="discussionforum.html" class="nav-item nav-link ">Discussion forums</a>
@@ -899,7 +899,7 @@ if(isset($_SESSION['user_id'])==false){
                <!-- <a href="/index.html" class="nav-item nav-link">Resources</a> -->
                <a href="Veterinarymain.html" class="nav-item nav-link ">Veterinary</a>
 
-               <a href="timeline.html" class="nav-item nav-link">SAC</a>
+               <a href="index.html" class="nav-item nav-link">SAC</a>
                <a href="Lost&Found.html" class="nav-item nav-link">Lost & Found</a>
                <a href="profile_view_photos.php" class="nav-item nav-link">My Profile</a>
 
