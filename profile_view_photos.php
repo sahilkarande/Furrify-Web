@@ -114,11 +114,10 @@ if (mysqli_num_rows($result) > 0) {
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
     <div class="navbar-nav ms-auto py-0">
-                    <a href="timeline.php" class="nav-item nav-link ">Timeline</a> 
+                    <a href="timeline.html" class="nav-item nav-link ">Timeline</a> 
                     <!-- feed section -->
                     <!-- <a href="/index.html" class="nav-item nav-link">About</a> -->
                     <a href="discussionforum.html" class="nav-item nav-link">Discussion forums</a>
-                    <a href="timeline.html" class="nav-item nav-link">Meetups</a>
                     <a href="marketplace.html" class="nav-item nav-link ">Marketplace</a>
                     <!-- <a href="/index.html" class="nav-item nav-link">Content</a> -->
                     <a href="eventsx.html" class="nav-item nav-link ">Events</a>
@@ -128,9 +127,7 @@ if (mysqli_num_rows($result) > 0) {
                     <a href="timeline.html" class="nav-item nav-link">SAC</a>
                     <a href="Lost&Found.html" class="nav-item nav-link">Lost & Found</a>
                     <a href="profile_view_photos.php" class="nav-item nav-link active">My Profile</a>
-
                 </div>
-        
     </div>
 </nav>
 
