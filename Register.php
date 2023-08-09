@@ -117,11 +117,14 @@ if (isset($_SESSION['email_alert'])) {
                                     <input required id="inputusername" type="username" name="username" placeholder="Username" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
                                 </div>
                                 <div class="form-group mb-3">
-                                    <input required id="inputpassword" type="password" name="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                    <input required id="inputpassword" type="password" name="password" placeholder="Password" required class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
                                 </div>
                                 <div class="form-group mb-3">
-                                    <input required id="inputconfpassword" type="confpass" name="confpass" placeholder="Confirm Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                    <input required id="inputconfpassword" type="password" name="confpass" placeholder="Confirm Password" required class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
                                 </div>
+
+                                
+
                                 <p id="message"></p>
                                 <div class="form-group mb-3">
                                     <select required name="roles" class="text-black/70 bg-white px-3 py-2 transition-all cursor-pointer hover:border-blue-600/30 border border-gray-200 rounded-lg outline-blue-600/50 appearance-none invalid:text-black/30 w-64">

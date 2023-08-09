@@ -110,8 +110,7 @@
 
 @media (max-width: 991.98px) {
     .sticky-top.navbar-light {
-        position: fixed;
-     
+
         background: #FFFFFF;
     }
 
@@ -171,12 +170,12 @@
 
 
 /*** Hero Header ***/
-.hero-header {
-    background: linear-gradient(rgba(17, 158, 194, 0.5), rgba(255, 206, 0, 0.1)), url(../img/bg5.png);
+/* .hero-header {
+    background: linear-gradient(rgba(17, 158, 194, 0.5), rgba(255, 206, 0, 0.1));
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
@@ -774,10 +773,7 @@
     }
 
 
-body{margin-top:20px;
-      background-color:#f2f6fc;
-      color:#69707a;
-      }
+
       .img-account-profile {
           height: 10rem;
       }
