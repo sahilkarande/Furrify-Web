@@ -8,7 +8,7 @@ if (!isset($_SESSION["userid"])) {
 }
 
 // Check if a file was uploaded
-if (isset($_FILES["header_image"])) {
+if (isset($_FILES["coverphoto"])) {
     $userid = $_SESSION["userid"];
     
 $connection = mysqli_connect("localhost", "root", "", "furrify") or die("Database connection failed");
@@ -22,13 +22,13 @@ $db = mysqli_select_db($connection, 'furrify');
 
     // Save the uploaded file to the server
     $target_dir = "uploads/";
-    $target_file = $target_dir . basename($_FILES["header_image"]["name"]);
-    move_uploaded_file($_FILES["header_image"]["tmp_name"], 
+    $target_file = $target_dir . basename($_FILES["coverphoto"]["name"]);
+    move_uploaded_file($_FILES["coverphoto"]["tmp_name"], 
     $target_file);
 
     // Insert the new header image into the database
     $sql = "INSERT INTO user_data (userid, photos, description, coverphoto, profilephoto, created_at)
-            VALUES ('$userid', '$target_file', 'header_image', '0', '0', NOW())";
+            VALUES ('$userid', '$target_file', 'coverphoto', '0', '0', NOW())";
     $result = mysqli_query($connection, $sql);
 
     // Check for errors
