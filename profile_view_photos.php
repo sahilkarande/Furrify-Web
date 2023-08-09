@@ -114,7 +114,7 @@ if (mysqli_num_rows($result) > 0) {
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
-          <a href="timeline.html" class="nav-item nav-link ">Home</a>
+          <a href="index.html" class="nav-item nav-link ">Home</a>
           <!-- feed section -->
           <!-- <a href="/index.html" class="nav-item nav-link">About</a> -->
           <a href="discussionforum.html" class="nav-item nav-link">Discussion forums</a>
@@ -122,11 +122,11 @@ if (mysqli_num_rows($result) > 0) {
           <!-- <a href="/index.html" class="nav-item nav-link">Content</a> -->
           <a href="eventsx.html" class="nav-item nav-link ">Events</a>
           <!-- <a href="/index.html" class="nav-item nav-link">Resources</a> -->
-          <a href="Veterinarymain.html" class="nav-item nav-link ">Veterinary</a>
+          <a href="Veterinarymain.html" class="nav-item nav-link active">Veterinary</a>
 
           <a href="timeline.html" class="nav-item nav-link">SAC</a>
           <a href="Lost&Found.html" class="nav-item nav-link">Lost & Found</a>
-          <a href="profile_view_photos.php" class="nav-item nav-link active">My Profile</a>
+          <a href="profile_view_photos.php" class="nav-item nav-link">My Profile</a>
 
         </div>
       </div>
@@ -211,7 +211,7 @@ if (mysqli_num_rows($result) > 0) {
 
   <!-- Main Body -->
   <div class="text-center mb-5" style="font-size: 20px; word-spacing: 100px; color: black;">
-    <a href="timeline.html">Timeline</a>
+    <a href="index.html">Timeline</a>
     <a href="profile_view_about.html">About</a>
     <a href="C:\XAMPP 2\htdocs\Furrify-Web\profile_view_photos.php">Friends</a>
     <a href="profile_view_photos.html">Photos</a>
