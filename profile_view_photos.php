@@ -38,25 +38,6 @@ if (mysqli_num_rows($result) > 0) {
   echo "<p>No results found for user ID $userid</p>";
 }
 
-// Query the database to get the user's cover photo file path
-$sql = "SELECT coverphoto FROM user_data WHERE userid = '$userid'";
-$result = mysqli_query($connection, $sql);
-
-// Check for errors
-if (!$result) {
-  die("Query failed: " . mysqli_error($connection));
-}
-
-// Retrieve the cover photo file path
-if (mysqli_num_rows($result) > 0) {
-  $row = mysqli_fetch_assoc($result);
-  $coverphoto = $row["coverphoto"];
-
-  // Store the cover photo file path in a session variable
-  $_SESSION["coverphoto"] = $coverphoto;
-} else {
-  $_SESSION["coverphoto"] = ""; // Set default cover photo if none found
-}
 ?>
 
 
@@ -195,10 +176,7 @@ if (mysqli_num_rows($result) > 0) {
               </div>
             </div>
           </div>
-          <form method="post" action="update_header_image.php" enctype="multipart/form-data"> <br><br>
-            <input type="file" accept="image/*" name="header_image" class="btn btn-primary rounded-pill py-2 px-6 active" onchange="previewFile()" id="headerImageInput"> <br> <br>
-            <input type="submit" class="btn btn-primary rounded-pill py-2 px-4 active" value="Update Header Image">
-          </form>
+          
         </div>
 
 
